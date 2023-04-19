@@ -1,0 +1,40 @@
+{
+  "name": "discord-lnd-bot",
+  "version": "1.0.0",
+  "description": "discord-lnd-bot",
+  "readme": "README.md",
+  "maintainers": [],
+  "author": "chrislennon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrislennon/discord-lnd-bot"
+  },
+  "license": "GPL-2.0",
+  "dependencies": {
+    "dedent-js": "^1.0.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "qrcode": "^1.4.4",
+    "winston": "^3.3.3",
+    "wretch": "^1.7.5"
+  },
+  "engines": {
+    "node": ">16.6.0",
+    "npm": ">=7.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startd": "nodemon index.js",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "jest": "^27.0.6",
+    "nock": "^13.1.1",
+    "nodemon": "^2.0.11"
+  }
+}
