@@ -37,14 +37,15 @@ class Help extends Command {
       .setURL(`https://lightning.bot`)
       .setDescription(dedent(`
     Source code: https://github.com/chrislennon/lnbits-discord-bot
-
+    Epsilon Source code: https://github.com/EpsilonCommunity/lnbits-discord-bot
     This bot allows you to interact with others users using the power of Bitcoins lightning network.
-
     You can learn more at https://lightning.how
+
+    
     `))
       .addFields(
         { name: `\u200B`, value: `\u200B` },
-        { name: `IMPORTANT INFORMATION`, value: `This is a custodial service, you do not control your money until you withdrawn it!` },
+        { name: `IMPORTANT INFORMATION`, value: `This is a custodial service, you do not control your money until you have withdrawn it!` },
         { name: `\u200B`, value: `\u200B` },
         { name: `Commands`, value: cmdOutput},
       );
