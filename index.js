@@ -52,4 +52,5 @@ DiscordBot.connect();
 const DiscordApp = App;
 DiscordApp.listen(process.env.APP_PORT, () => {
   console.log(`Example app listening at http://localhost:${process.env.APP_PORT}`);
+  client.channels.get('1017516722472890429').send('LNBot Started.');
 });
