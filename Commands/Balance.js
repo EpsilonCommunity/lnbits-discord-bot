@@ -30,6 +30,10 @@ class Balance extends Command {
     
           const sats = userWalletDetails.balance/1000;
           const btc = (sats/100000000).toFixed(8).replace(/\.?0+$/,``);
+          const satsWithdrawLimitmin = 50000;
+          const satsWithdrawLimitmax = 10000000;
+          const btcWithdrawLimitmin = (satsWithdrawLimitmin/100000000).toFixed(8).replace(/\.?0+$/,``);
+          const btcWithdrawLimitmax = (satsWithdrawLimitmax/100000000).toFixed(8).replace(/\.?0+$/,``);
 
           const row = new Discord.MessageActionRow()
             .addComponents([
@@ -43,7 +47,7 @@ class Balance extends Command {
       
 
           Interaction.editReply({
-            content:`Balance: ${sats} Satoshis / ฿${btc}`,
+            content:`Balance: ${sats} Satoshis / ฿${btc} \n Minimum Withdrawal: ${satsWithdrawLimitmin} Satoshis / ฿${btcWithdrawLimitmin} \n Maximum Withdrawal: ${satsWithdrawLimitmax} Satoshis / ฿${btcWithdrawLimitmax}`,
             ephemeral: true,
             components: [row]
           });
