@@ -58,7 +58,7 @@ class PayMe extends Command {
       const qrData = await QRCode.toDataURL(invoiceDetails.payment_request);
       const buffer = new Buffer.from(qrData.split(`,`)[1], `base64`);
       const file = new Discord.MessageAttachment(buffer, `image.png`);
-      const embed = new Discord.MessageEmbed().setImage(`attachment://image.png`).addField(`Payment Request`, `${invoiceDetails.payment_request}`, true);
+      const embed = new Discord.MessageEmbed().setImage(`attachment://image.png`).addField(`Payment Request`, `${description.value} \n ${invoiceDetails.payment_request}`, true);
   
       // const row = new Discord.MessageActionRow()
       //   .addComponents([
