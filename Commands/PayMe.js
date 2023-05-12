@@ -54,7 +54,6 @@ class PayMe extends Command {
       
       const uw = new UserWallet(userWallet.adminkey);
       const invoiceDetails = await uw.createInvote(amount.value, description.value);
-   
       const qrData = await QRCode.toDataURL(invoiceDetails.payment_request);
       const buffer = new Buffer.from(qrData.split(`,`)[1], `base64`);
       const file = new Discord.MessageAttachment(buffer, `image.png`);
